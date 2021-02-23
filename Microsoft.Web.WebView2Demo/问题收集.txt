@@ -1,0 +1,8 @@
+﻿
+常见问题列表
+https://github.com/MicrosoftEdge/WebView2Feedback/issues
+
+缩放问题
+https://github.com/MicrosoftEdge/WebView2Feedback/issues/606
+https://github.com/MicrosoftEdge/WebView2Feedback/issues/459
+https://github.com/MicrosoftEdge/WebView2Feedback/issues/732

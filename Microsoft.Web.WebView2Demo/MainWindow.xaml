@@ -1,0 +1,79 @@
+﻿<Window x:Class="WebView2Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WebView2Demo"
+        mc:Ignorable="d"
+        Width="900"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        Title="MainWindow"
+        WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal"
+                    Background="#FFEEF1AF">
+            <TextBox Height="30"
+                     Width="520"
+                     x:Name="txtUrl"
+                     Text="http://www.baidu.com/"></TextBox>
+            <Button Content="浏览"
+                    Margin="20 0 0 0"
+                    Height="30"
+                    Click="Button_Click"
+                    Width="60">
+                <!--<Button.Style>
+                    <Style>
+                        <Style.Triggers>
+                            <
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>-->
+                <!--<Button.InputBindings>
+                    <MouseBinding Command=""
+                                  MouseAction="LeftClick"></MouseBinding>
+                </Button.InputBindings>-->
+            </Button>
+            <Button Content="测试本地网页"
+                    Margin="20 0 0 0"
+                    Height="30"
+                    x:Name="btn"
+                    Click="btn_Click"
+                    Width="80"></Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1"
+                    Background="#FFA4E0AC">
+            <TextBlock Text="参数："
+                       VerticalAlignment="Center"
+                       Foreground="Red"></TextBlock>
+            <TextBox Height="25"
+                     Width="200"
+                     x:Name="txtArg"
+                     Text="Hello--JS"></TextBox>
+            <Button Content="调用JS"
+                    Margin="20 0 0 0"
+                    Height="30"
+                    x:Name="callJS"
+                    Click="callJS_Click"
+                    Width="60"></Button>
+            <Button Content="调用JS传参数"
+                    Margin="20 0 0 0"
+                    Height="30"
+                    Click="callJSArg_Click"
+                    Width="80"></Button>
+            <Button Content="调用JS获取值"
+                    Margin="20 0 0 0"
+                    Height="30"
+                    Click="callJSGetData_Click"
+                    Width="80"></Button>
+        </StackPanel>
+        <wv2:WebView2 Name="webView"
+                     Grid.Row="2"
+                      Source="https://www.baidu.com/" />
+    </Grid>
+</Window>
